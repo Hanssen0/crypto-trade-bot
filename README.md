@@ -25,8 +25,8 @@
 
 ### From GitHub Package
 
-1. Clone repo or download [`config.yaml`](./config/config.yaml) and [`docker-compose.ghcr.yaml`](./docker-compose.ghcr.yaml)
-2. Edit the `config.yaml`
+1. Clone repo or download [`config.yaml`](./config/config.example.yaml) and [`docker-compose.ghcr.yaml`](./docker-compose.ghcr.yaml)
+2. Edit (and rename) the `config.example.yaml`
 3. Edit the `docker-compose.ghcr.yaml`, specify your config file path
 
     ``` yaml
