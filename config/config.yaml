@@ -1,0 +1,19 @@
+mysql:
+  host: trade-bot-mysql
+  port: 3306
+  username: trade
+  password: trade
+  database: trade
+
+redis:
+  url: "redis://trade-bot-redis:6379"
+
+cron:
+  check_interval: 1000
+
+exchange:
+  create_order_timeout: 120000
+  id: binance # See https://docs.ccxt.com/#/ccxt.pro.manual?id=exchanges
+  is_sandbox: true
+  api_key: "0000000000000000000000000000000000000000000000000000000000000000"
+  secret: "0000000000000000000000000000000000000000000000000000000000000000"

@@ -1,0 +1,40 @@
+services:
+  trade-bot:
+    image: ghcr.io/hanssen0/crypto-trade-bot:v0.0.1
+    container_name: trade-bot
+    restart: unless-stopped
+    volumes:
+      - ./config/config.yaml:/app/config/config.yaml
+    depends_on:
+      - trade-bot-redis
+      - trade-bot-mysql
+    networks:
+      - trade-bot-networks
+
+  trade-bot-mysql:
+    image: mysql:8
+    container_name: trade-bot-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: trade
+      MYSQL_DATABASE: trade
+      MYSQL_USER: trade
+      MYSQL_PASSWORD: trade
+    volumes:
+      - ./mysql:/var/lib/mysql
+    restart: always
+    networks:
+      - trade-bot-networks
+
+  trade-bot-redis:
+    image: redis:7.2-alpine
+    container_name: trade-bot-redis
+    volumes:
+      - ./redis:/data
+    restart: always
+    networks:
+      - trade-bot-networks
+
+
+networks:
+  trade-bot-networks:
+    driver: bridge

@@ -1,0 +1,53 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2021",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@app/dca": [
+        "libs/dca/src"
+      ],
+      "@app/dca/*": [
+        "libs/dca/src/*"
+      ],
+      "@app/commons": [
+        "libs/commons/src"
+      ],
+      "@app/commons/*": [
+        "libs/commons/src/*"
+      ],
+      "@app/schemas": [
+        "libs/schemas/src"
+      ],
+      "@app/schemas/*": [
+        "libs/schemas/src/*"
+      ],
+      "@app/dca-orders": [
+        "libs/dca-orders/src"
+      ],
+      "@app/dca-orders/*": [
+        "libs/dca-orders/src/*"
+      ],
+      "@app/orders": [
+        "libs/orders/src"
+      ],
+      "@app/orders/*": [
+        "libs/orders/src/*"
+      ]
+    }
+  }
+}
